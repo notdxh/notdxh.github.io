@@ -4,11 +4,6 @@
 {%- if page.path contains '_posts/' -%}
 <script type="text/javascript" src="{{site.baseurl}}/static/js/toc.js?t={{ buildAt }}"></script>
 {% endif %}
-{%- if page.path contains '_posts/' -%}
-<script>
-  new TOC();
-</script>
-{% endif %}
 {%- if site.extClickEffect %}
 <!-- 点击页面文字冒出特效 -->
 <script>
@@ -31,3 +26,8 @@
 {% include ext-mathjax.html %}
 {% endif %}
 
+{%- if page.path contains '_posts/' -%}
+<script>
+  new TOC();
+</script>
+{% endif %}
